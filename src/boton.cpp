@@ -14,7 +14,6 @@ boton::boton(int _pin, unsigned int _modo) {
 int boton::checar(){
     if (modo && !digitalRead(pin)) {
         presionado = true;
-        Serial.println("checar");
         return 1;
     }else if (!modo && digitalRead(pin)) {
         presionado = true;
